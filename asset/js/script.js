@@ -166,7 +166,9 @@ async function loadUVData(city, filter = "past") {
                     }
                 },
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    max:11,
+                    
                 }
             }
         }

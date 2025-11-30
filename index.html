@@ -24,14 +24,14 @@
 
     <section id="content" class="container">
                  
-            <div class="display">
+        <div class="display">
             <h3>Please type in the city name you would like to search:</h3>
-            <input type="text" id="location" name="Location" size="30" maxlength="30" data-rule-required="true" data-msg-required="Location is Required" title="City Name"><br><br>
+            <input type="text" id="location" name="Location" size="30" maxlength="30" data-rule-required="true" data-msg-required="Location is Required" placeholder="City Name"><br><br>
             <input type="button" value="Clear" id="Clear" name="Clear" onclick="clearForm();">
         </div>
 
         <div class="city-tracker">
-            <h1>Would you like to view the past 5 days or future?</h1>
+            <h3>Would you like to view the past 5 days or future?</h3>
              
             <div class="filter-buttons">
                 <button class="time" data-filter="past">Past</button>
@@ -39,20 +39,31 @@
             </div>
 
             <div class="charts-canvas">
+
                 <div class="tab-content" data-category="past">
                     <h3>Here's the Past 5 days</h3>
                     <div id="past-table"></div>
-                    <canvas id="past-chart" width="400" height="200"></canvas>
+
+                    <div class="chart-box">
+                        <canvas id="past-chart"></canvas>
+                    </div>
                 </div>
 
+                <!-- FUTURE TAB -->
                 <div class="tab-content" data-category="future" style="display:none;">
                     <h3>Here's The future 5 Days</h3>
                     <div id="future-table"></div>
-                    <canvas id="future-chart" width="400" height="200"></canvas>
+
+                    <!-- WRAPPED CANVAS -->
+                    <div class="chart-box">
+                        <canvas id="future-chart"></canvas>
+                    </div>
                 </div>
+
+            </div>
         </div>
-</div>
     </section>
 
     <script src="asset/js/script.js"></script>
 </body>
+</html>
